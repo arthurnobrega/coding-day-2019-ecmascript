@@ -1,4 +1,4 @@
-import { checkFiveCards, checkCard, checkHand } from './poker';
+import { checkFiveCards, checkCard, checkHand, higherCard } from './poker';
 
 describe('Checar 5 cartas', () => {
   test('checa mão com cinco cartas', () => {
@@ -40,4 +40,10 @@ describe('Checar carta válida', () => {
   test('checa se uma carta de valor valido é passada', () => {
     expect(checkCard('2C')).toEqual(true);
   });
+});
+
+describe('Checar combinações', () => {
+  test('retorna a maior carta da mão', () => {
+    expect(higherCard('2H 3D 5S 9C KD')).toEqual('KD');
+  })
 });

@@ -1,5 +1,10 @@
+const VALUES = ['2', '3', '4', '5', '6', '7', '8', '9', 'T', 'J', 'Q', 'K', 'A'];
+const SUITS = ['S', 'H', 'D', 'C'];
+
+const splitCards = (hand) => hand.split(' ')
+
 export function checkFiveCards(hand) {
-  return hand.split(' ').length === 5;
+  return splitCards(hand).length === 5;
 }
 
 export function checkCard(card) {
@@ -7,15 +12,24 @@ export function checkCard(card) {
 }
 
 function validateSuit(card) {
-  const suits = ['S', 'H', 'D', 'C'];
-  return !!suits.filter(s => s === card[1]).length;
+  return !!SUITS.filter(s => s === card[1]).length;
 }
 function validateValue(card) {
-  const values = ['2', '3', '4', '5', '6', '7', '8', '9',
-    'T', 'J', 'Q', 'K', 'A'];
-  return !!values.filter(s => s === card[0]).length;
+  return !!VALUES.filter(s => s === card[0]).length;
 }
 
 export function checkHand(hand) {
-  return checkFiveCards(hand) && hand.split(' ').every(checkCard);
+  return checkFiveCards(hand) && splitCards(hand).every(checkCard);
 }
+
+export function higherCard(hand) {
+  const cards = splitCards(hand);
+  const strength = cards.map(card => VALUES.indexOf(card[0]));
+  const index = strength.indexOf(Math.max(...strength));
+  return cards[index];
+}
+
+
+
+
+
