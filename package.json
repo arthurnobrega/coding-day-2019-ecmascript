@@ -2,7 +2,7 @@
   "name": "coding-day-2019-ecmascript",
   "version": "0.0.1",
   "description": "Exercise with Ecmascript to DOJO part of Coding Day event in Brasília on april 27th, 2019",
-  "main": "index.js",
+  "main": "poker.js",
   "author": "Brasília Coding Day 2019",
   "license": "MIT",
   "scripts": {
