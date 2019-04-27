@@ -1,0 +1,21 @@
+{
+  "name": "coding-day-2019-ecmascript",
+  "version": "0.0.1",
+  "description": "Exercise with Ecmascript to DOJO part of Coding Day event in Brasília on april 27th, 2019",
+  "main": "index.js",
+  "author": "Brasília Coding Day 2019",
+  "license": "MIT",
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.4.3",
+    "@babel/core": "^7.4.3",
+    "@babel/node": "^7.2.2",
+    "@babel/preset-env": "^7.4.3",
+    "babel-eslint": "^10.0.1",
+    "babel-jest": "^24.7.1",
+    "eslint": "^5.16.0",
+    "jest": "^24.7.1"
+  }
+}
