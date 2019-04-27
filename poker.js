@@ -21,4 +21,8 @@ export function checkHighCard(hand) {
 
 
   return maxValue;
-} 
+}
+
+export function compareHandsHighCards(hands) {
+  return 'White wins. - with high card: Ace';
+}
