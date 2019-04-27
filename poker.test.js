@@ -1,4 +1,4 @@
-import { checkFiveCards, checkCard } from './poker';
+import { checkFiveCards, checkCard, checkHand } from './poker';
 
 describe('Checar 5 cartas', () => {
   test('checa mão com cinco cartas', () => {
@@ -6,6 +6,18 @@ describe('Checar 5 cartas', () => {
   });
   test('checa mão com 4 cartas', () => {
     expect(checkFiveCards('2H 3D 5S 9C')).toEqual(false);
+  });
+});
+
+describe('Checar todas as 5 cartas da mao', () => {
+  test('checa mão com cinco cartas', () => {
+    expect(checkHand('2H 2D 5S 9C KD')).toEqual(true);
+  });
+  test('checa mão com cinco cartas com erro', () => {
+    expect(checkHand('2H 0D 5S 9C KD')).toEqual(false);
+  });
+  test('checa se mão não tem cinco cartas', () => {
+    expect(checkHand('2H 2D 5S 9C')).toEqual(false);
   });
 });
 

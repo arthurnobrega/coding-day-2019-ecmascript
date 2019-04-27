@@ -15,3 +15,7 @@ function validateValue(card) {
     'T', 'J', 'Q', 'K', 'A'];
   return !!values.filter(s => s === card[0]).length;
 }
+
+export function checkHand(hand) {
+  return checkFiveCards(hand) && hand.split(' ').every(checkCard);
+}
